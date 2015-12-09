@@ -5,16 +5,15 @@
 <title>Formulario transparente //by elporfirio.com</title>
 </head>
 <style>
-body {
-	background-image: url(fondo_desenfocado.jpg);
-	background-position: top center;
-	background-repeat: no-repeat;
-	padding-top: 30%;
+html {
+	background: url(fondo_desenfocado.jpg) no-repeat center fixed;
+    background-size: cover;
 }
 form {
 	width: 500px;
 	margin: auto;
 	text-align: center;
+    padding-top: 20%;
 }
 legend{
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -46,7 +45,10 @@ input[type=text], input[type=password]{
 	padding-left: 20px;
 }
 
-input[type=text]:hover, input[type=password]:hover{
+input[type=text]:hover,
+input[type=text]:focus,
+input[type=password]:hover,
+input[type=password]:focus{
 	background-color: rgba(253,253,253,0.4);
 	cursor: pointer;
 }
@@ -77,12 +79,33 @@ input[type=submit]:hover{
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403) );
 	background:-moz-linear-gradient( center top, #77a809 5%, #89c403 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+    cursor: pointer;
 }
 .credits{
 	margin-top: 20px;
 	color: rgba(51,51,51,1);
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	font-size: 12px;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+    text-shadow: none;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: rgba(255,255,255,0.5);
+    text-shadow: none;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba(255,255,255,0.5);
+    text-shadow: none;
+}
+
+:-ms-input-placeholder {
+    color: rgba(255,255,255,0.5);
+    text-shadow: none;
 }
 </style>
 <body>
